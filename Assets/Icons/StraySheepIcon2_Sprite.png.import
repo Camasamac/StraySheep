@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StraySheepIcon_Sprite.png-a94b53837d58411eaf884c4d8879cd38.stex"
+path="res://.import/StraySheepIcon2_Sprite.png-d65e4d4bf03e23e5191c8f501b16d2c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://StraySheepIcon_Sprite.png"
-dest_files=[ "res://.import/StraySheepIcon_Sprite.png-a94b53837d58411eaf884c4d8879cd38.stex" ]
+source_file="res://Assets/Icons/StraySheepIcon2_Sprite.png"
+dest_files=[ "res://.import/StraySheepIcon2_Sprite.png-d65e4d4bf03e23e5191c8f501b16d2c3.stex" ]
 
 [params]
 
