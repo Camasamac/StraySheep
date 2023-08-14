@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Stray Sheep - ISD Project"
 config/description="Made for a final assignment in Games Development, Stray Sheep is a 2.5D beat-em-up style game with a variety of strategy challenges in the game's combat system. Discover the traits of the world and explore new tactics in the world of Stray Sheep."
-run/main_scene="res://Game Scenes/TEST_Main Zone.tscn"
+run/main_scene="res://Misc. Scenes/Main Menu.tscn"
 config/icon="res://Assets/Icons/StraySheepIcon_Sprite.png"
 
 [autoload]

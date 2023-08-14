@@ -3,9 +3,10 @@ extends KinematicBody2D
 const UP = Vector2(0,-1)
 
 onready var playernode = get_node("Player2D")
+export(String) var scene_to_load
 
-var gravity = 40 # Gravity's strength.
-const movement_speed = 300 # Determines the base movement speed of the player.
+var gravity = 50 # Gravity's strength.
+const movement_speed = 200 # Determines the base movement speed of the player.
 const maximum_jumpPower = -1000.0 # How much force used to make player high jump.
 const minimum_jumpPower = -600.0 # How much force used to make the player small jump.
 
@@ -37,18 +38,22 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_up"):
 		print("go up")
-		Global.player_depth += 1
-		velocity.y - 5
-		velocity.x + 5
-		collision_layer += 2
+		velocity.y -= 25
+		if Global.player_depth < 7:
+			Global.player_depth += 1
+			collision_layer += 1
+		if Global.player_depth == 7:
+			collision_layer == Global.player_depth
 		print(Global.player_depth)
 		
 	if Input.is_action_pressed("ui_down"):
 		print("go down")
-		Global.player_depth -= 1
-		velocity.y + 5
-		velocity.x - 5
-		collision_layer -= 2
+		velocity.y += 25
+		if Global.player_depth > 1:
+			Global.player_depth -= 1
+			collision_layer -= 1
+		if Global.player_depth == 1:
+			collision_layer == Global.player_depth
 		print(Global.player_depth)
 	
 	#print(velocity.y)
