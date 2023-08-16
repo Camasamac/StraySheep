@@ -10,137 +10,153 @@ extents = Vector2( 439.25, 18 )
 
 [node name="Layer7Depth" type="StaticBody2D" parent="."]
 light_mask = 64
-position = Vector2( 30, -30 )
+position = Vector2( 511, 496 )
 collision_layer = 64
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer7Depth"]
 light_mask = 64
-position = Vector2( 494, 522 )
+position = Vector2( 1, 0 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer7Depth"]
 light_mask = 64
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -441.0
+margin_top = -19.0
+margin_right = 444.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Layer6Depth" type="StaticBody2D" parent="."]
 light_mask = 32
-position = Vector2( 25, -25 )
+position = Vector2( 506, 501 )
 collision_layer = 32
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer6Depth"]
 light_mask = 32
-position = Vector2( 494, 522 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer6Depth"]
 light_mask = 32
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -441.0
+margin_top = -19.0
+margin_right = 444.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Layer5Depth" type="StaticBody2D" parent="."]
 light_mask = 16
-position = Vector2( 20, -20 )
+position = Vector2( 501, 506 )
 collision_layer = 16
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer5Depth"]
 light_mask = 16
-position = Vector2( 494, 522 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer5Depth"]
 light_mask = 16
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -441.0
+margin_top = -19.0
+margin_right = 444.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Layer4Depth" type="StaticBody2D" parent="."]
 light_mask = 8
-position = Vector2( 15, -15 )
+position = Vector2( 496, 511 )
 collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer4Depth"]
 light_mask = 8
-position = Vector2( 494, 522 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer4Depth"]
 light_mask = 8
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -445.0
+margin_top = -19.0
+margin_right = 440.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Layer3Depth" type="StaticBody2D" parent="."]
 light_mask = 4
-position = Vector2( 10, -10 )
+position = Vector2( 491, 516 )
 collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer3Depth"]
 light_mask = 4
-position = Vector2( 494, 522 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer3Depth"]
 light_mask = 4
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -445.0
+margin_top = -19.0
+margin_right = 440.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Layer2Depth" type="StaticBody2D" parent="."]
 light_mask = 2
-position = Vector2( 5, -5 )
+position = Vector2( 486, 521 )
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer2Depth"]
 light_mask = 2
-position = Vector2( 494, 522 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer2Depth"]
 light_mask = 2
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -444.0
+margin_top = -19.0
+margin_right = 441.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Layer1Depth" type="StaticBody2D" parent="."]
+position = Vector2( 481, 526 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer1Depth"]
-position = Vector2( 494, 522 )
 shape = SubResource( 1 )
 
 [node name="placeholder texture" type="TextureRect" parent="Layer1Depth"]
-margin_left = 51.0
-margin_top = 501.0
-margin_right = 936.0
-margin_bottom = 541.0
+margin_left = -442.0
+margin_top = -19.0
+margin_right = 443.0
+margin_bottom = 21.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Player2D" parent="." groups=["Player"] instance=ExtResource( 2 )]
 position = Vector2( 320, 393 )

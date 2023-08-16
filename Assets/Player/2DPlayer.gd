@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const UP = Vector2(0,-1)
 
-onready var playernode = get_node("Player2D")
+onready var playernode = get_node("res://Assets/Player/2DPlayer.tscn")
 export(String) var scene_to_load
 
 var gravity = 50 # Gravity's strength.
@@ -38,22 +38,24 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_up"):
 		print("go up")
-		velocity.y -= 25
+		#velocity.y -= 100
 		if Global.player_depth < 7:
 			Global.player_depth += 1
-			collision_layer += 1
+			set_collision_layer_bit(Global.player_depth + 1, true)
 		if Global.player_depth == 7:
-			collision_layer == Global.player_depth
+			set_collision_layer_bit(7, true)
 		print(Global.player_depth)
 		
 	if Input.is_action_pressed("ui_down"):
 		print("go down")
-		velocity.y += 25
+		#velocity.y += 50
+		# The above code will allow the player to fly when they enable jumping, could be used later.
 		if Global.player_depth > 1:
 			Global.player_depth -= 1
-			collision_layer -= 1
+			set_collision_layer_bit(Global.player_depth - 1, true)
+			# not used yet
 		if Global.player_depth == 1:
-			collision_layer == Global.player_depth
+			set_collision_layer_bit(1, true)
 		print(Global.player_depth)
 	
 	#print(velocity.y)
