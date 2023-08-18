@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Pause Menu/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/arial_narrow_7/arial_narrow_7.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 3 )
+
+[node name="PauseMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+scene_to_load = "res://Title and Main Scenes/Main Menu.tscn"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 50.0
+margin_top = 400.0
+margin_right = 284.0
+margin_bottom = 578.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_right = 234.0
+margin_bottom = 178.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 234.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 1 )
+text = "PAUSED"
+__meta__ = {
+"_editor_description_": "(18/08/23): Use this website to perhaps create your own font file. Would look better looking.
+
+https://yal.cc/r/20/pixelfont/"
+}
+
+[node name="SpaceBetween" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 78.0
+margin_right = 234.0
+margin_bottom = 88.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 234.0
+margin_bottom = 112.0
+text = "Resume Game"
+
+[node name="SpaceBetween2" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 116.0
+margin_right = 234.0
+margin_bottom = 121.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 125.0
+margin_right = 234.0
+margin_bottom = 145.0
+text = "Return to Main Menu"
+
+[node name="SpaceBetween3" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 149.0
+margin_right = 234.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 158.0
+margin_right = 234.0
+margin_bottom = 178.0
+text = "Quit Game"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
