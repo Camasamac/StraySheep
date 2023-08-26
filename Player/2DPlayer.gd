@@ -18,14 +18,22 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += gravity
+	var isMoving: bool = false
 	
 	# Player movement code for pressing 'left' and 'right'.
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = -movement_speed
+		$AnimationPlayer.stop("Idle")
+		isMoving = true
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x = movement_speed
+		$AnimationPlayer.stop("Idle")
+		isMoving = true
 	else:
 		velocity.x = 0
+	
+	if(!isMoving):
+		$AnimationPlayer.play("Idle")
 	
 	# As long as the player is touching a floor, they can jump using the space bar button.
 	if is_on_floor():

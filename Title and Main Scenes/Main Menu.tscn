@@ -1,14 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/SceneChange.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/arial_narrow_7/arial_narrow_7.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 55
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 41.0
-margin_top = 30.0
-margin_right = 91.0
-margin_bottom = 50.0
+margin_left = 48.0
+margin_top = 180.0
+margin_right = 98.0
+margin_bottom = 200.0
 rect_scale = Vector2( 2, 2 )
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
@@ -17,5 +24,43 @@ margin_bottom = 20.0
 text = "START"
 script = ExtResource( 1 )
 scene_to_load = "res://Game Scenes/TEST_Main Zone.tscn"
+
+[node name="Title" type="Label" parent="."]
+margin_left = 37.0
+margin_top = 53.0
+margin_right = 323.0
+margin_bottom = 104.0
+custom_colors/font_color = Color( 0.286275, 0.168627, 0.27451, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "STRAY SHEEP"
+
+[node name="Informative Text" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 566.0
+margin_right = 778.0
+margin_bottom = 580.0
+rect_scale = Vector2( 0.6, 0.6 )
+text = "A small beat-em-up side-scroller game by Artemis Interactive Studios, Cameron Black, Taj Thompson and Kurt Mcdonald"
+
+[node name="Version Text" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 578.0
+margin_right = 494.0
+margin_bottom = 592.0
+text = "VERSION 0.2.1 - Stray Sheep MVP Beta"
+
+[node name="temporary text" type="Label" parent="."]
+margin_left = 639.0
+margin_top = 76.0
+margin_right = 1007.0
+margin_bottom = 209.0
+text = "Delete this label once completed:
+
+Things to do for MVP (class due week 7, probably):
+1. Side scrolling screen
+2. Depth problem
+3. Fundamental enemy AI
+4. Combat system (at least 3 types) and their weaknesses
+5. Fundamental trait system."
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_Button_pressed"]

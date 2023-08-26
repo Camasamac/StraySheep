@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Icons/icon.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Player/2DPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/2DPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Pause Menu/PauseMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://User Interface Additions/ScrollingBackground.tscn" type="PackedScene" id=4]
 
@@ -167,17 +167,3 @@ position = Vector2( 320, 393 )
 visible = false
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
-
-[node name="Label" type="Label" parent="."]
-margin_left = 240.0
-margin_top = 99.0
-margin_right = 280.0
-margin_bottom = 113.0
-text = "Delete this label over the weekend:
-
-Things to do for MVP (class due week 7, probably):
-1. Side scrolling screen
-2. Depth problem
-3. Fundamental enemy AI
-4. Combat system (at least 3 types) and their weaknesses
-5. Fundamental trait system."
