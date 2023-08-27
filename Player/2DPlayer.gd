@@ -6,6 +6,7 @@ onready var playernode = get_node("res://Assets/Player/2DPlayer.tscn")
 export(String) var scene_to_load
 
 var gravity = 50 # Gravity's strength.
+var maximum_fall_speed = 50
 const movement_speed = 200 # Determines the base movement speed of the player.
 const maximum_jumpPower = -1000.0 # How much force used to make player high jump.
 const minimum_jumpPower = -600.0 # How much force used to make the player small jump.
@@ -18,6 +19,9 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += gravity
+	if velocity.y > maximum_fall_speed:
+		velocity.y = maximum_fall_speed
+		# This above statement (velocity = maximum_fall_speed) SHOULD cap the gravity at 50 and not go beyond that.
 	var isMoving: bool = false
 	
 	# Player movement code for pressing 'left' and 'right'.
