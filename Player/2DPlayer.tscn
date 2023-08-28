@@ -62,8 +62,8 @@ func _physics_process(delta):
 				set_collision_layer_bit(Global.player_depth + 1, false)
 				set_collision_layer_bit(Global.player_depth, true)
 				# what makes it so i can go down?!
-		if Global.player_depth == 7:
-			set_collision_layer_bit(7, true)
+		#if Global.player_depth == 7:
+			#set_collision_layer_bit(7, true)
 		print(Global.player_depth)
 		
 	if Input.is_action_pressed(\"ui_down\"):
@@ -78,8 +78,8 @@ func _physics_process(delta):
 			if Input.is_action_just_released(\"ui_down\"):
 				set_collision_layer_bit(Global.player_depth - 1, false)
 				set_collision_layer_bit(Global.player_depth, true)
-		if Global.player_depth == 1:
-			set_collision_layer_bit(1, true)
+		#if Global.player_depth == 1:
+			#set_collision_layer_bit(1, true)
 		print(Global.player_depth)
 	
 	#print(velocity.y)
@@ -106,7 +106,7 @@ tracks/0/keys = {
 "values": [ 0, 4, 6, 4 ]
 }
 
-[node name="Node2D" type="KinematicBody2D"]
+[node name="2DPlayer" type="KinematicBody2D"]
 script = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -121,3 +121,13 @@ vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 50 )
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+__meta__ = {
+"_editor_description_": "Everything contained within the Pink Border is the camera in the game."
+}
