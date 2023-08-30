@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://addons/dialogic/Editor/Events/styles/SettingsFieldBackground.tres" type="StyleBox" id=1]
-[ext_resource path="res://addons/dialogic/Editor/Events/Parts/ResourcePickers/ResourcePickerMenu.gd" type="Script" id=3]
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/ResourcePickers/ResourcePickerMenu.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/SettingsFieldBackground.tres" type="StyleBox" id=2]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -24,13 +24,13 @@ margin_bottom = 24.0
 focus_mode = 2
 size_flags_vertical = 4
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_styles/hover = ExtResource( 1 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
 text = "Resource"
 flat = false
 align = 0
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

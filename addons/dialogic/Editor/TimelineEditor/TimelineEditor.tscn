@@ -1,18 +1,18 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://addons/dialogic/Images/Tutorials/arrow-down.svg" type="Texture" id=13]
-[ext_resource path="res://addons/dialogic/Editor/TimelineEditor/TimelineEditor.gd" type="Script" id=17]
-[ext_resource path="res://addons/dialogic/Editor/Common/TLabel.tscn" type="PackedScene" id=21]
-[ext_resource path="res://addons/dialogic/Editor/TimelineEditor/TimelineArea.gd" type="Script" id=22]
-[ext_resource path="res://addons/dialogic/Editor/Theme/MainTheme.tres" type="Theme" id=28]
-[ext_resource path="res://addons/dialogic/Editor/TimelineEditor/FlexContainer.gd" type="Script" id=29]
+[ext_resource path="res://addons/dialogic/Editor/TimelineEditor/TimelineEditor.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialogic/Editor/TimelineEditor/TimelineArea.gd" type="Script" id=2]
+[ext_resource path="res://addons/dialogic/Editor/Theme/MainTheme.tres" type="Theme" id=3]
+[ext_resource path="res://addons/dialogic/Images/Tutorials/arrow-down.svg" type="Texture" id=4]
+[ext_resource path="res://addons/dialogic/Editor/Common/TLabel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/dialogic/Editor/TimelineEditor/FlexContainer.gd" type="Script" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 5.0
 content_margin_right = 5.0
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -40,9 +40,9 @@ anchor_bottom = 1.0
 margin_bottom = 138.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 28 )
+theme = ExtResource( 3 )
 split_offset = 7
-script = ExtResource( 17 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,7 +53,7 @@ margin_bottom = 738.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/bg = SubResource( 1 )
-script = ExtResource( 22 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,7 +105,7 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 40, 40 )
-texture = ExtResource( 13 )
+texture = ExtResource( 4 )
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="ScrollContainer/EventContainer/EventsWarning/HBoxContainer"]
@@ -124,7 +124,7 @@ margin_top = 77.0
 margin_right = 184.0
 margin_bottom = 91.0
 
-[node name="TLabel" parent="ScrollContainer/EventContainer/HBoxContainer6" instance=ExtResource( 21 )]
+[node name="TLabel" parent="ScrollContainer/EventContainer/HBoxContainer6" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 77.0
@@ -143,14 +143,14 @@ margin_top = 100.0
 margin_right = 184.0
 margin_bottom = 145.0
 size_flags_horizontal = 3
-script = ExtResource( 29 )
+script = ExtResource( 6 )
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/EventContainer"]
 margin_top = 154.0
 margin_right = 184.0
 margin_bottom = 168.0
 
-[node name="TLabel2" parent="ScrollContainer/EventContainer/HBoxContainer5" instance=ExtResource( 21 )]
+[node name="TLabel2" parent="ScrollContainer/EventContainer/HBoxContainer5" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 33.0
@@ -169,14 +169,14 @@ margin_top = 177.0
 margin_right = 184.0
 margin_bottom = 272.0
 size_flags_horizontal = 3
-script = ExtResource( 29 )
+script = ExtResource( 6 )
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/EventContainer"]
 margin_top = 281.0
 margin_right = 184.0
 margin_bottom = 295.0
 
-[node name="TLabel3" parent="ScrollContainer/EventContainer/HBoxContainer3" instance=ExtResource( 21 )]
+[node name="TLabel3" parent="ScrollContainer/EventContainer/HBoxContainer3" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 56.0
@@ -195,14 +195,14 @@ margin_top = 304.0
 margin_right = 184.0
 margin_bottom = 449.0
 size_flags_horizontal = 3
-script = ExtResource( 29 )
+script = ExtResource( 6 )
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/EventContainer"]
 margin_top = 458.0
 margin_right = 184.0
 margin_bottom = 472.0
 
-[node name="TLabel4" parent="ScrollContainer/EventContainer/HBoxContainer4" instance=ExtResource( 21 )]
+[node name="TLabel4" parent="ScrollContainer/EventContainer/HBoxContainer4" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 37.0
@@ -221,14 +221,14 @@ margin_top = 481.0
 margin_right = 184.0
 margin_bottom = 576.0
 size_flags_horizontal = 3
-script = ExtResource( 29 )
+script = ExtResource( 6 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/EventContainer"]
 margin_top = 585.0
 margin_right = 184.0
 margin_bottom = 599.0
 
-[node name="TLabel5" parent="ScrollContainer/EventContainer/HBoxContainer" instance=ExtResource( 21 )]
+[node name="TLabel5" parent="ScrollContainer/EventContainer/HBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 39.0
@@ -247,14 +247,14 @@ margin_top = 608.0
 margin_right = 184.0
 margin_bottom = 678.0
 size_flags_horizontal = 3
-script = ExtResource( 29 )
+script = ExtResource( 6 )
 
 [node name="CustomEventsHeadline" type="HBoxContainer" parent="ScrollContainer/EventContainer"]
 margin_top = 687.0
 margin_right = 184.0
 margin_bottom = 701.0
 
-[node name="TLabel6" parent="ScrollContainer/EventContainer/CustomEventsHeadline" instance=ExtResource( 21 )]
+[node name="TLabel6" parent="ScrollContainer/EventContainer/CustomEventsHeadline" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 95.0
@@ -273,7 +273,7 @@ margin_top = 710.0
 margin_right = 184.0
 margin_bottom = 830.0
 size_flags_horizontal = 3
-script = ExtResource( 29 )
+script = ExtResource( 6 )
 
 [node name="Spacer" type="Control" parent="ScrollContainer/EventContainer"]
 margin_top = 839.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://addons/dialogic/Editor/ThemeEditor/AudioPicker.gd" type="Script" id=1]
-[ext_resource path="res://addons/dialogic/Editor/Common/TLabel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/dialogic/Editor/Common/TLabel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/dialogic/Editor/ThemeEditor/AudioPicker.gd" type="Script" id=2]
 
 [node name="AudioPicker" type="GridContainer"]
 margin_right = 265.0
@@ -9,12 +9,12 @@ margin_bottom = 132.0
 size_flags_horizontal = 3
 custom_constants/hseparation = 10
 columns = 2
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FileLabel" parent="." instance=ExtResource( 2 )]
+[node name="FileLabel" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
@@ -39,7 +39,7 @@ margin_bottom = 24.0
 size_flags_horizontal = 3
 text = "File or Folder"
 
-[node name="VolumeLabel" parent="." instance=ExtResource( 2 )]
+[node name="VolumeLabel" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 33.0
@@ -71,7 +71,7 @@ hint_tooltip = "Random Range"
 step = 0.01
 prefix = "±"
 
-[node name="PitchLabel" parent="." instance=ExtResource( 2 )]
+[node name="PitchLabel" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 61.0
@@ -103,7 +103,7 @@ max_value = 10.0
 step = 0.01
 prefix = "±"
 
-[node name="InterruptLabel" parent="." instance=ExtResource( 2 )]
+[node name="InterruptLabel" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 89.0
@@ -118,7 +118,7 @@ margin_top = 84.0
 margin_right = 265.0
 margin_bottom = 108.0
 
-[node name="AudioBusLabel" parent="." instance=ExtResource( 2 )]
+[node name="AudioBusLabel" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 115.0

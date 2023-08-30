@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Italic.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://addons/dialogic/Documentation/Nodes/DocsPageViewer.gd" type="Script" id=6]
+[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Italic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/dialogic/Documentation/Nodes/DocsPageViewer.gd" type="Script" id=3]
+[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 content_margin_left = 89.5
@@ -13,21 +13,21 @@ content_margin_right = 119.333
 use_filter = true
 extra_spacing_char = 2
 extra_spacing_space = 2
-font_data = ExtResource( 1 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
 use_filter = true
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=5]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
 use_filter = true
-font_data = ExtResource( 1 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="Image" id=9]
 data = {
@@ -50,7 +50,7 @@ margin_bottom = 600.0
 focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource( 6 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

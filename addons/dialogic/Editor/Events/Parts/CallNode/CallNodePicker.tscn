@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://addons/dialogic/Editor/Events/Parts/CallNode/EventPart_CallNodePicker.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/InputFieldsStyle.tres" type="Theme" id=1]
 [ext_resource path="res://addons/dialogic/Editor/Events/Parts/Text/GreyLabel.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/dialogic/Editor/Events/Parts/Text/CustomLineEdit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/dialogic/Editor/Events/styles/InputFieldsStyle.tres" type="Theme" id=4]
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/CallNode/EventPart_CallNodePicker.gd" type="Script" id=3]
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/Text/CustomLineEdit.tscn" type="PackedScene" id=4]
 
 [node name="CallNodePicker" type="VBoxContainer"]
 margin_right = 40.0
 margin_bottom = 40.0
-theme = ExtResource( 4 )
-script = ExtResource( 1 )
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -33,7 +33,7 @@ margin_right = 81.0
 margin_bottom = 20.0
 text = "Target Node:"
 
-[node name="TargetNodeEdit" parent="Properties" instance=ExtResource( 3 )]
+[node name="TargetNodeEdit" parent="Properties" instance=ExtResource( 4 )]
 margin_left = 89.0
 margin_right = 329.0
 margin_bottom = 27.0
@@ -46,7 +46,7 @@ margin_right = 432.0
 margin_bottom = 20.0
 text = "Method Name:"
 
-[node name="CallMethodEdit" parent="Properties" instance=ExtResource( 3 )]
+[node name="CallMethodEdit" parent="Properties" instance=ExtResource( 4 )]
 margin_left = 440.0
 margin_right = 620.0
 margin_bottom = 27.0

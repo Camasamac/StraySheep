@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://addons/dialogic/Editor/CharacterEditor/PortraitEntry.gd" type="Script" id=2]
+[ext_resource path="res://addons/dialogic/Editor/CharacterEditor/PortraitEntry.gd" type="Script" id=1]
 
 [sub_resource type="Image" id=4]
 data = {
@@ -20,7 +20,7 @@ size = Vector2( 16, 16 )
 [node name="PortraitEntry" type="HBoxContainer"]
 margin_right = 451.0
 margin_bottom = 24.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

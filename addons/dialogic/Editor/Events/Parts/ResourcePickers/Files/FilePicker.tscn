@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://addons/dialogic/Editor/Events/styles/SimpleButtonHover.tres" type="StyleBox" id=1]
-[ext_resource path="res://addons/dialogic/Editor/Events/styles/SettingsFieldBackground.tres" type="StyleBox" id=2]
-[ext_resource path="res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Files/EventPart_FilePicker.gd" type="Script" id=3]
-[ext_resource path="res://addons/dialogic/Editor/Events/Parts/Text/GreyLabel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://addons/dialogic/Editor/Events/styles/SimpleButtonNormal.tres" type="StyleBox" id=7]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/SettingsFieldBackground.tres" type="StyleBox" id=1]
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/Text/GreyLabel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/SimpleButtonHover.tres" type="StyleBox" id=3]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/SimpleButtonNormal.tres" type="StyleBox" id=4]
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Files/EventPart_FilePicker.gd" type="Script" id=5]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -26,12 +26,12 @@ margin_top = 1.0
 margin_right = 331.0
 margin_bottom = 23.0
 size_flags_vertical = 4
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" parent="." instance=ExtResource( 4 )]
+[node name="Label" parent="." instance=ExtResource( 2 )]
 margin_top = 5.0
 margin_right = 13.0
 margin_bottom = 19.0
@@ -42,10 +42,10 @@ text = "to"
 margin_left = 17.0
 margin_right = 143.0
 margin_bottom = 24.0
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 2 )
-custom_styles/focus = ExtResource( 2 )
-custom_styles/normal = ExtResource( 2 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
 text = "none so far"
 
 [node name="icon" type="TextureRect" parent="FileButton"]
@@ -81,7 +81,7 @@ margin_left = 147.0
 margin_right = 169.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 22, 22 )
-custom_styles/hover = ExtResource( 1 )
-custom_styles/pressed = ExtResource( 1 )
-custom_styles/normal = ExtResource( 7 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
 icon = SubResource( 2 )
