@@ -1,21 +1,18 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/SceneChange.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/arial_narrow_7/arial_narrow_7.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Icons/Stray Sheep Logo 3.png" type="Texture" id=2]
+[ext_resource path="res://Title and Main Scenes/MainMenuBackground.tscn" type="PackedScene" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 55
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[node name="Main Menu" type="Node2D"]
 
-[node name="Node2D" type="Node2D"]
+[node name="MainMenuBackground" parent="." instance=ExtResource( 4 )]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 48.0
-margin_top = 180.0
+margin_top = 268.0
 margin_right = 98.0
-margin_bottom = 200.0
+margin_bottom = 288.0
 rect_scale = Vector2( 2, 2 )
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
@@ -24,15 +21,6 @@ margin_bottom = 20.0
 text = "START"
 script = ExtResource( 1 )
 scene_to_load = "res://Game Scenes/TEST_Main Zone.tscn"
-
-[node name="Title" type="Label" parent="."]
-margin_left = 37.0
-margin_top = 53.0
-margin_right = 323.0
-margin_bottom = 104.0
-custom_colors/font_color = Color( 0.286275, 0.168627, 0.27451, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "STRAY SHEEP"
 
 [node name="Informative Text" type="Label" parent="."]
 margin_left = 7.0
@@ -61,5 +49,10 @@ Things to do for MVP (class due week 7, probably):
 3. Fundamental enemy AI
 4. Combat system (at least 3 types) and their weaknesses
 5. Fundamental trait system."
+
+[node name="TitleLogo" type="Sprite" parent="."]
+self_modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+position = Vector2( 229, 131 )
+texture = ExtResource( 2 )
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_Button_pressed"]

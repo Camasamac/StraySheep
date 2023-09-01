@@ -89,6 +89,10 @@ config/icon="res://Assets/Icons/StraySheepIcon_Sprite.png"
 
 Global="*res://Scripts/Global.gd"
 
+[display]
+
+window/size/resizable=false
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
