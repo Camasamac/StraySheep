@@ -5,6 +5,7 @@ var entered = false
 
 func _on_Area2D_body_entered(body: PhysicsBody2D):
 	entered = true
+	# Will need some reworking to determine what the player's depth level is to enable going through the door.
 
 func _on_Area2D_body_exited(body):
 	entered = false

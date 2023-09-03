@@ -1,41 +1,77 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/SceneChange.gd" type="Script" id=1]
+[ext_resource path="res://Title and Main Scenes/MainMenuButtons.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Icons/Stray Sheep Logo 3.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/arial_narrow_7/arial_narrow_7.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Title and Main Scenes/MainMenuBackground.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
 
 [node name="Main Menu" type="Node2D"]
 
 [node name="MainMenuBackground" parent="." instance=ExtResource( 4 )]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MainMenuButtons" type="VBoxContainer" parent="."]
 margin_left = 48.0
 margin_top = 268.0
 margin_right = 98.0
 margin_bottom = 288.0
 rect_scale = Vector2( 2, 2 )
-
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-margin_right = 50.0
-margin_bottom = 20.0
-text = "START"
 script = ExtResource( 1 )
-scene_to_load = "res://Game Scenes/TEST_Main Zone.tscn"
+
+[node name="StartButton" type="Button" parent="MainMenuButtons"]
+margin_right = 92.0
+margin_bottom = 20.0
+text = "START GAME"
+
+[node name="SpaceBetweenButtons" type="Control" parent="MainMenuButtons"]
+margin_top = 24.0
+margin_right = 92.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="OptionsButton" type="Button" parent="MainMenuButtons"]
+margin_top = 32.0
+margin_right = 92.0
+margin_bottom = 52.0
+text = "OPTIONS"
+
+[node name="SpaceBetweenButtons2" type="Control" parent="MainMenuButtons"]
+margin_top = 56.0
+margin_right = 92.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="QuitButton" type="Button" parent="MainMenuButtons"]
+margin_top = 64.0
+margin_right = 92.0
+margin_bottom = 84.0
+text = "QUIT GAME"
 
 [node name="Informative Text" type="Label" parent="."]
-margin_left = 7.0
-margin_top = 566.0
-margin_right = 778.0
-margin_bottom = 580.0
+margin_left = 9.0
+margin_top = 560.0
+margin_right = 937.0
+margin_bottom = 577.0
 rect_scale = Vector2( 0.6, 0.6 )
+custom_colors/font_color = Color( 1, 1, 1, 0.333333 )
+custom_fonts/font = SubResource( 1 )
 text = "A small beat-em-up side-scroller game by Artemis Interactive Studios, Cameron Black, Taj Thompson and Kurt Mcdonald"
 
 [node name="Version Text" type="Label" parent="."]
 margin_left = 9.0
-margin_top = 578.0
+margin_top = 574.0
 margin_right = 494.0
 margin_bottom = 592.0
-text = "VERSION 0.2.1 - Stray Sheep MVP Beta"
+custom_colors/font_color = Color( 1, 1, 1, 0.333333 )
+custom_fonts/font = SubResource( 2 )
+text = "VERSION 0.3 - Stray Sheep MVP Beta variant 2"
 
 [node name="temporary text" type="Label" parent="."]
 margin_left = 639.0
@@ -55,4 +91,6 @@ self_modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
 position = Vector2( 229, 131 )
 texture = ExtResource( 2 )
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_Button_pressed"]
+[connection signal="pressed" from="MainMenuButtons/StartButton" to="MainMenuButtons" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MainMenuButtons/OptionsButton" to="MainMenuButtons" method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="MainMenuButtons/QuitButton" to="MainMenuButtons" method="_on_QuitButton_pressed"]

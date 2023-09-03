@@ -13,6 +13,14 @@
 	"portraits": [
 		{
 			"name": "Default",
+			"path": ""
+		},
+		{
+			"name": "GodotNPC_Angry",
+			"path": "res://Assets/Talksprites/GodotNPC_Angry.png"
+		},
+		{
+			"name": "GodotNPC_Idle",
 			"path": "res://Assets/Talksprites/GodotNPC_Idle.png"
 		}
 	],

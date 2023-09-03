@@ -7,8 +7,11 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+timeline = "timeline-1693780491.json"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 464.0
+margin_top = 464.0
+margin_right = 528.0
+margin_bottom = 533.0
 texture = ExtResource( 1 )

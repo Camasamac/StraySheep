@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"animation": "slide_in_right.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1693310426.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "GodotNPC_Idle",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1693310426.json",
+			"event_id": "dialogic_001",
+			"portrait": "GodotNPC_Idle",
+			"text": "Hello there. My name is Godot Man."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5",
+		"file": "timeline-1693780491.json",
+		"name": "GodotNPCTestEncounter.json"
+	}
+}
