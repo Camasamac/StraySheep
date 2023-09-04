@@ -19,19 +19,19 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += gravity
-	if velocity.y > maximum_fall_speed:
-		velocity.y = maximum_fall_speed
+	#if velocity.y > maximum_fall_speed:
+		#elocity.y = maximum_fall_speed
 		# This above statement (velocity = maximum_fall_speed) SHOULD cap the gravity at 50 and not go beyond that.
 	var isMoving: bool = false
 	
 	# Player movement code for pressing 'left' and 'right'.
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = -movement_speed
-		$AnimationPlayer.stop("Idle")
+		$AnimationPlayer.stop()
 		isMoving = true
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x = movement_speed
-		$AnimationPlayer.stop("Idle")
+		$AnimationPlayer.stop()
 		isMoving = true
 	else:
 		velocity.x = 0
@@ -53,15 +53,16 @@ func _physics_process(delta):
 		#velocity.y -= 100
 		if Global.player_depth < 7:
 			Global.player_depth += 1
-			if Input.is_action_pressed("ui_up"):
-				set_collision_layer_bit(Global.player_depth + 1, true)
-				get_collision_layer_bit(Global.player_depth)
-			if Input.is_action_just_released("ui_up"):
-				set_collision_layer_bit(Global.player_depth + 1, false)
-				set_collision_layer_bit(Global.player_depth, true)
+			#if Input.is_action_pressed("ui_up"):
+			set_collision_layer_bit(Global.player_depth - 1, false)
+			set_collision_layer_bit(Global.player_depth, true)
+			#get_collision_layer_bit(Global.player_depth)
+			#if Input.is_action_just_released("ui_up"):
+				#set_collision_layer_bit(Global.player_depth + 1, false)
+				#set_collision_layer_bit(Global.player_depth, true)
 				# what makes it so i can go down?!
 		if Global.player_depth == 7:
-			set_collision_layer_bit(7, true)
+			set_collision_layer_bit(6, true)
 		print(Global.player_depth)
 		
 	if Input.is_action_pressed("ui_down"):
@@ -70,14 +71,15 @@ func _physics_process(delta):
 		# The above code will allow the player to fly when they enable jumping, could be used later.
 		if Global.player_depth > 1:
 			Global.player_depth -= 1
-			if Input.is_action_pressed("ui_down"):
-				set_collision_layer_bit(Global.player_depth - 1, true)
-				get_collision_layer_bit(Global.player_depth)
-			if Input.is_action_just_released("ui_down"):
-				set_collision_layer_bit(Global.player_depth - 1, false)
-				set_collision_layer_bit(Global.player_depth, true)
+			#if Input.is_action_pressed("ui_down"):
+			set_collision_layer_bit(Global.player_depth + 1, false)
+			set_collision_layer_bit(Global.player_depth, true)
+			#get_collision_layer_bit(Global.player_depth)
+			#if Input.is_action_just_released("ui_down"):
+				#set_collision_layer_bit(Global.player_depth - 1, false)
+				#set_collision_layer_bit(Global.player_depth, true)
 		if Global.player_depth == 1:
-			set_collision_layer_bit(1, true)
+			set_collision_layer_bit(0, true)
 		print(Global.player_depth)
 	
 	#print(velocity.y)
