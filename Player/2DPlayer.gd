@@ -20,7 +20,7 @@ func _ready():
 func _physics_process(delta):
 	velocity.y += gravity
 	#if velocity.y > maximum_fall_speed:
-		#elocity.y = maximum_fall_speed
+		#velocity.y = maximum_fall_speed
 		# This above statement (velocity = maximum_fall_speed) SHOULD cap the gravity at 50 and not go beyond that.
 	var isMoving: bool = false
 	
@@ -41,7 +41,7 @@ func _physics_process(delta):
 	
 	# As long as the player is touching a floor, they can jump using the space bar button.
 	if is_on_floor():
-		if Input.is_action_pressed("ui_jump"):
+		if Input.is_action_just_pressed("ui_jump"):
 			velocity.y = maximum_jumpPower
 	
 	# This portion of the jumping code allows for the player to 'short hop'.
