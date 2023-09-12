@@ -101,7 +101,7 @@ window/size/resizable=false
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogic/plugin.cfg" )
 
 [gui]
 
