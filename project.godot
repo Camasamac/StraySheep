@@ -94,6 +94,7 @@ config/icon="res://Assets/Icons/StraySheepIcon_Sprite.png"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+SaveFile="*res://Scripts/save_file.gd"
 
 [display]
 
@@ -154,11 +155,13 @@ ui_down={
 }
 ui_page_up={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777235,"unicode":0,"echo":false,"script":null)
+ ]
 }
 ui_page_down={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777236,"unicode":0,"echo":false,"script":null)
+ ]
 }
 ui_home={
 "deadzone": 0.5,
