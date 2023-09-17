@@ -63,20 +63,20 @@ func handle_flipping():
 func handle_states():
 	match state:
 		states.IDLE:
-			anim.play("idle")
+			anim.play("Idle")
 		states.RUN:
-			anim.play("run")
+			anim.play("Run")
 		states.ATTACK:
-			anim.play("attack")
+			anim.play("Attack")
 			# once the animation reaches the final frame, go back to idle
-			if anim.frame == 11:
+			if anim.frame == 9:
 				state = states.IDLE
 		states.HURT:
-			anim.play("hurt")
-			if anim.frame == 4:
+			anim.play("Hurt")
+			if anim.frame == 10:
 				state = states.IDLE
 		states.DEATH:
-			anim.play("death")
+			anim.play("Death")
 			
 func _on_PlayerDetectionArea_body_entered(body):
 	if body.name == "2DPlayer":

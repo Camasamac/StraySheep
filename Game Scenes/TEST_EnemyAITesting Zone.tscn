@@ -183,4 +183,5 @@ margin_right = -170.0
 margin_bottom = -350.0
 
 [node name="Enemy-Layer1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 849, 474 )
+position = Vector2( 849, 457 )
+scale = Vector2( 0.8, 0.8 )
