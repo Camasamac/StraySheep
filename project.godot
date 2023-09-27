@@ -94,7 +94,7 @@ config/icon="res://Assets/Icons/StraySheepIcon_Sprite.png"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
-SaveFile="*res://Scripts/save_file.gd"
+Autoload="*res://Scripts/Autoload.gd"
 
 [display]
 

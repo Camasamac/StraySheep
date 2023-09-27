@@ -385,3 +385,4 @@ shape = SubResource( 4 )
 
 [connection signal="body_entered" from="PlayerDetectionArea" to="." method="_on_PlayerDetectionArea_body_entered"]
 [connection signal="body_entered" from="AttackRange" to="." method="_on_AttackRange_body_entered"]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_AttackRange_body_exited"]

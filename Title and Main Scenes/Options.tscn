@@ -1,10 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/arial_narrow_7/arial_narrow_7.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneChange.gd" type="Script" id=2]
-[ext_resource path="res://Options Buttons.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/save_test.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/save_file.gd" type="Script" id=5]
+[ext_resource path="res://Title and Main Scenes/Options Buttons.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 28
@@ -12,22 +10,15 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 20
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 30
-outline_size = 2
-outline_color = Color( 0.168627, 0.470588, 0.215686, 1 )
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 1 )
 
 [node name="Options" type="Control"]
-script = ExtResource( 4 )
+margin_left = 149.0
+margin_top = 531.0
+margin_right = 149.0
+margin_bottom = 531.0
 
 [node name="TabContainer" type="TabContainer" parent="."]
 margin_left = -122.0
@@ -36,7 +27,6 @@ margin_right = 843.0
 margin_bottom = 44.0
 
 [node name="General" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -73,63 +63,6 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="Stat_Adjustments" type="Tabs" parent="TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Stat_Adjustments"]
-anchor_left = -0.021
-anchor_top = -0.075
-anchor_right = -0.021
-anchor_bottom = -0.075
-margin_left = 63.097
-margin_top = 72.3
-margin_right = 215.097
-margin_bottom = 92.3
-
-[node name="IncreaseHealthButton" type="Button" parent="TabContainer/Stat_Adjustments/VBoxContainer"]
-margin_right = 205.0
-margin_bottom = 28.0
-rect_min_size = Vector2( 0, 28 )
-custom_constants/hseparation = 0
-custom_fonts/font = SubResource( 3 )
-text = "Increase Health Value"
-
-[node name="SpaceInBetween" type="Control" parent="TabContainer/Stat_Adjustments/VBoxContainer"]
-margin_top = 32.0
-margin_right = 205.0
-margin_bottom = 42.0
-rect_min_size = Vector2( 0, 10 )
-
-[node name="DecreaseHealthButton" type="Button" parent="TabContainer/Stat_Adjustments/VBoxContainer"]
-margin_top = 46.0
-margin_right = 205.0
-margin_bottom = 74.0
-rect_min_size = Vector2( 0, 28 )
-custom_fonts/font = SubResource( 3 )
-text = "Decrease Health Value"
-script = ExtResource( 5 )
-
-[node name="HealthLabel" type="Label" parent="TabContainer/Stat_Adjustments"]
-margin_left = 605.0
-margin_top = 16.0
-margin_right = 790.0
-margin_bottom = 48.0
-custom_fonts/font = SubResource( 4 )
-text = "Current Health"
-
-[node name="HealthPrint" type="ProgressBar" parent="TabContainer/Stat_Adjustments"]
-margin_left = 800.0
-margin_top = 9.0
-margin_right = 850.0
-margin_bottom = 49.0
-rect_min_size = Vector2( 50, 40 )
-custom_fonts/font = SubResource( 4 )
-
 [node name="OptionsQuit" type="Button" parent="."]
 self_modulate = Color( 0.796078, 0.701961, 0.701961, 1 )
 margin_left = -97.0
@@ -144,6 +77,4 @@ scene_to_load = "res://Title and Main Scenes/Main Menu.tscn"
 
 [connection signal="toggled" from="TabContainer/General/Options Buttons VBOX/FullScreenButton" to="TabContainer/General/Options Buttons VBOX" method="_on_FullScreenButton_toggled"]
 [connection signal="toggled" from="TabContainer/General/Options Buttons VBOX/CheatEnableButton" to="TabContainer/General/Options Buttons VBOX" method="_on_CheatEnableButton_toggled"]
-[connection signal="pressed" from="TabContainer/Stat_Adjustments/VBoxContainer/IncreaseHealthButton" to="." method="_on_IncreaseHealthButton_pressed"]
-[connection signal="pressed" from="TabContainer/Stat_Adjustments/VBoxContainer/DecreaseHealthButton" to="." method="_on_DecreaseHealthButton_pressed"]
 [connection signal="pressed" from="OptionsQuit" to="OptionsQuit" method="_on_Button_pressed"]

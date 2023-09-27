@@ -1,20 +1,21 @@
 extends KinematicBody2D
 class_name Enemy
 
-onready var anim = $TextureRect
+onready var anim = $EnemyAnimationPlayer
 onready var player_detection = $PlayerDetectionArea/CollisionShape2D
 onready var attack_range = $AttackRange/CollisionShape2D
 onready var hit_range = $Hitbox/CollisionShape2D
 
-var reference_player
+onready var reference_player = get_parent().get_node("Player2D")
 
 var player_in_range = false
 
 var gravity = 100
 var walk_speed = 60
+var max_walk_speed = 70
 
 var velocity = Vector2()
-var direction = Vector2()
+var direction = 0
 
 var state = states.IDLE
 
@@ -37,8 +38,9 @@ func _process(delta):
 	handle_states()
 	handle_flipping()
 	
+	
 	if reference_player:
-		print("there is the player")
+		state = states.RUN
 	
 	if player_in_range:
 		print("attack now")
@@ -48,24 +50,30 @@ func _process(delta):
 
 func handle_physics(delta):
 	velocity.y += gravity * delta
-	velocity.x = direction.x
+	velocity.x = direction * walk_speed
 	
 	move_and_slide(velocity, Vector2.UP)
 
 func handle_flipping():
-	direction = (reference_player.global_position - global_position).normalized()
 	
-	if direction.x < 0:
-		anim.flip_h = true
-	elif direction.x > 0:
-		anim.flip_h = false
+	if Global.PlayerPosition_X < 0 and !state == states.ATTACK:
+		self.flip_h = true
+	elif Global.PlayerPosition_X > 0 and !state == states.ATTACK:
+		self.flip_h = false
+
+func handle_damages(damage):
+	print("ouch")
+	state = states.HURT
 
 func handle_states():
 	match state:
 		states.IDLE:
 			anim.play("Idle")
+			walk_speed = 0
 		states.RUN:
 			anim.play("Run")
+			
+			walk_speed = max_walk_speed
 		states.ATTACK:
 			anim.play("Attack")
 			# once the animation reaches the final frame, go back to idle
@@ -85,3 +93,7 @@ func _on_PlayerDetectionArea_body_entered(body):
 func _on_AttackRange_body_entered(body):
 	if body.name == "2DPlayer":
 		player_in_range = true
+
+func _on_AttackRange_body_exited(body):
+	if body.name == "2DPlayer":
+		player_in_range = false

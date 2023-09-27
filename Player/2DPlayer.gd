@@ -11,13 +11,25 @@ const movement_speed = 200 # Determines the base movement speed of the player.
 const maximum_jumpPower = -1000.0 # How much force used to make player high jump.
 const minimum_jumpPower = -600.0 # How much force used to make the player small jump.
 
+var player_position_X = Global.PlayerPosition_X
+var player_position_Y = Global.PlayerPosition_Y
+
+var player_position = Vector2(player_position_X, player_position_Y)
+
 var velocity = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	self.global_transform.origin = player_position
 
 func _physics_process(delta):
+	player_position_X = self.global_transform.origin.x
+	player_position_Y = self.global_transform.origin.y
+	
+	Global.PlayerPosition_X = player_position_X
+	Global.PlayerPosition_Y = player_position_Y
+	Autoload.save_game()
+	
 	velocity.y += gravity
 	#if velocity.y > maximum_fall_speed:
 		#velocity.y = maximum_fall_speed
