@@ -6,7 +6,7 @@ onready var player_detection = $PlayerDetectionArea/CollisionShape2D
 onready var attack_range = $AttackRange/CollisionShape2D
 onready var hit_range = $Hitbox/CollisionShape2D
 
-onready var reference_player = get_parent().get_node("Player2D")
+onready var reference_player
 
 var player_in_range = false
 
@@ -57,9 +57,9 @@ func handle_physics(delta):
 func handle_flipping():
 	
 	if Global.PlayerPosition_X < 0 and !state == states.ATTACK:
-		self.flip_h = true
+		pass
 	elif Global.PlayerPosition_X > 0 and !state == states.ATTACK:
-		self.flip_h = false
+		$EnemySprite.flip_h
 
 func handle_damages(damage):
 	print("ouch")

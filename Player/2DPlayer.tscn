@@ -44,7 +44,6 @@ position = Vector2( 3, 36 )
 current = true
 zoom = Vector2( 0.9, 0.9 )
 drag_margin_h_enabled = true
-drag_margin_v_enabled = true
 smoothing_enabled = true
 __meta__ = {
 "_editor_description_": "Everything contained within the Pink Border is the camera in the game."
