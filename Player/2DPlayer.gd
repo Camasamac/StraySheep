@@ -3,7 +3,7 @@ extends KinematicBody2D
 const UP = Vector2(0,-1)
 
 onready var playernode = get_node("res://Assets/Player/2DPlayer.tscn")
-onready var playerattackindicator = get_node("CanvasLayer/AttackIndicatorAnimPlayer")
+
 export(String) var scene_to_load
 
 var gravity = 50 # Gravity's strength.
@@ -99,9 +99,6 @@ func _physics_process(delta):
 	# IF THERE IS NO ACTION FOR PRIMARY ATTACK LEFT, DOWN, UP OR RIGHT, IN THE BEGINNING
 	# THE ATTACK ANIM SHOULD BE "EMPTY ATTACK", AS THERE IS NO SELECTED ATTACK FROM THE
 	# USER CURRENTLY.
-		
-	if Input.is_action_pressed("ui_primary_attack_left"):
-		playerattackindicator.play("Empty -> Slap")
 	
 	#print(velocity.y)
 	move_and_slide(velocity , UP)

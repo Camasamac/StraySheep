@@ -42,7 +42,7 @@ margin_right = 494.0
 margin_bottom = 592.0
 custom_colors/font_color = Color( 1, 1, 1, 0.333333 )
 custom_fonts/font = SubResource( 2 )
-text = "VERSION 0.3 - Stray Sheep MVP Beta variant 2"
+text = "VERSION 0.6 - Stray Sheep MVP Beta"
 
 [node name="temporary text" type="Label" parent="."]
 margin_left = 639.0

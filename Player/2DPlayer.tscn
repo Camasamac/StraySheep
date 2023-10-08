@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/2DPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Player/apollo sprite v2-Sheet2.png" type="Texture" id=2]
+[ext_resource path="res://User Interface Additions/HealthBar.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.8516, 52.0938 )
@@ -35,6 +36,18 @@ position = Vector2( 0, -7 )
 texture = ExtResource( 2 )
 hframes = 9
 vframes = 3
+__meta__ = {
+"_aseprite_wizard_config_": {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"op_exp": false,
+"player": "AnimationPlayer",
+"source": ""
+}
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 2 )
@@ -48,3 +61,10 @@ smoothing_enabled = true
 __meta__ = {
 "_editor_description_": "Everything contained within the Pink Border is the camera in the game."
 }
+
+[node name="HealthBar" parent="." instance=ExtResource( 3 )]
+margin_left = -32.0
+margin_top = -82.0
+margin_right = -32.0
+margin_bottom = -82.0
+rect_scale = Vector2( 0.4, 0.3 )

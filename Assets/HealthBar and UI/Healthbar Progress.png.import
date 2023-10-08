@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerAttackTypeIndicator.png-95297409299a5886b2bd3dabb85dad5d.stex"
+path="res://.import/Healthbar Progress.png-b4470597300e261c9b58bd14b5acc5ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/PlayerAttackTypeIndicator.png"
-dest_files=[ "res://.import/PlayerAttackTypeIndicator.png-95297409299a5886b2bd3dabb85dad5d.stex" ]
+source_file="res://Assets/HealthBar and UI/Healthbar Progress.png"
+dest_files=[ "res://.import/Healthbar Progress.png-b4470597300e261c9b58bd14b5acc5ca.stex" ]
 
 [params]
 
