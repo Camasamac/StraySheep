@@ -4,8 +4,6 @@ const UP = Vector2(0,-1)
 
 onready var playernode = get_node("res://Assets/Player/2DPlayer.tscn")
 
-export(String) var scene_to_load
-
 var gravity = 50 # Gravity's strength.
 var maximum_fall_speed = 50
 const movement_speed = 200 # Determines the base movement speed of the player.
@@ -64,8 +62,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
 		print("go up")
 		#velocity.y -= 100
-		if Global.player_depth < 7:
+		if Global.player_depth < 13:
 			Global.player_depth += 1
+			Global.player_mask += 1
 			#if Input.is_action_pressed("ui_up"):
 			set_collision_layer_bit(Global.player_depth - 1, false)
 			set_collision_layer_bit(Global.player_depth, true)
@@ -74,8 +73,8 @@ func _physics_process(delta):
 				#set_collision_layer_bit(Global.player_depth + 1, false)
 				#set_collision_layer_bit(Global.player_depth, true)
 				# what makes it so i can go down?!
-		if Global.player_depth == 7:
-			set_collision_layer_bit(6, true)
+		if Global.player_depth == 13:
+			set_collision_layer_bit(12, true)
 		print(Global.player_depth)
 		
 	if Input.is_action_pressed("ui_down"):
@@ -84,6 +83,7 @@ func _physics_process(delta):
 		# The above code will allow the player to fly when they enable jumping, could be used later.
 		if Global.player_depth > 1:
 			Global.player_depth -= 1
+			Global.player_mask -= 1
 			#if Input.is_action_pressed("ui_down"):
 			set_collision_layer_bit(Global.player_depth + 1, false)
 			set_collision_layer_bit(Global.player_depth, true)
