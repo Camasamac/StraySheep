@@ -100,14 +100,14 @@ margin_bottom = 84.0
 text = "QUIT GAME"
 
 [node name="Saves" type="VBoxContainer" parent="CanvasLayer"]
-margin_left = 431.0
-margin_top = 239.0
-margin_right = 521.0
-margin_bottom = 383.0
+margin_left = 423.0
+margin_top = 181.0
+margin_right = 547.0
+margin_bottom = 377.0
 rect_scale = Vector2( 1.6, 1.6 )
 
 [node name="Save1Button" type="Button" parent="CanvasLayer/Saves"]
-margin_right = 90.0
+margin_right = 124.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 90, 40 )
 custom_constants/hseparation = 0
@@ -116,13 +116,13 @@ text = "Save 1"
 
 [node name="SpaceBetweenButtons2" type="Control" parent="CanvasLayer/Saves"]
 margin_top = 44.0
-margin_right = 90.0
+margin_right = 124.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 0, 4 )
 
 [node name="Save2Button" type="Button" parent="CanvasLayer/Saves"]
 margin_top = 52.0
-margin_right = 90.0
+margin_right = 124.0
 margin_bottom = 92.0
 rect_min_size = Vector2( 90, 40 )
 custom_constants/hseparation = 0
@@ -131,18 +131,33 @@ text = "Save 2"
 
 [node name="SpaceBetweenButtons3" type="Control" parent="CanvasLayer/Saves"]
 margin_top = 96.0
-margin_right = 90.0
+margin_right = 124.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 4 )
 
 [node name="Save3Button" type="Button" parent="CanvasLayer/Saves"]
 margin_top = 104.0
-margin_right = 90.0
+margin_right = 124.0
 margin_bottom = 144.0
 rect_min_size = Vector2( 90, 40 )
 custom_constants/hseparation = 0
 custom_fonts/font = SubResource( 3 )
 text = "Save 3"
+
+[node name="SpaceBetweenButtons4" type="Control" parent="CanvasLayer/Saves"]
+margin_top = 148.0
+margin_right = 124.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="DeleteSaveButton" type="Button" parent="CanvasLayer/Saves"]
+margin_top = 156.0
+margin_right = 124.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 90, 40 )
+custom_constants/hseparation = 0
+custom_fonts/font = SubResource( 3 )
+text = "Delete Save"
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButtons/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenuButtons/OptionsButton" to="." method="_on_OptionsButton_pressed"]
@@ -150,3 +165,4 @@ text = "Save 3"
 [connection signal="pressed" from="CanvasLayer/Saves/Save1Button" to="." method="_on_Save1Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Saves/Save2Button" to="." method="_on_Save2Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Saves/Save3Button" to="." method="_on_Save3Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Saves/DeleteSaveButton" to="." method="_on_DeleteSaveButton_pressed"]

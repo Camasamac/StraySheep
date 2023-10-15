@@ -33,3 +33,9 @@ func _on_Save3Button_pressed():
 
 func init_scene():
 	get_tree().change_scene("res://Game Scenes/TEST_Main Zone.tscn")
+
+func _on_DeleteSaveButton_pressed():
+	var dir = Directory.new()
+	# Does not quite work yet.
+	dir.remove("user://save.bin")
+	print("h")
